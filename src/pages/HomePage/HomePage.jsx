@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Grid, Typography, Button, Box } from "@mui/material";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import BackgroundImage from "../../assets/BackgroundImage.png";
+import BackgroundImage from "../../assets/BackgroundImage.jpg";
 import NavBar from "../../components/NavBar/NavBar";
 import {
   SiSpringboot,
@@ -21,10 +21,10 @@ const HomePage = () => {
   return (
     <>
       <NavBar />
-      <Grid container xs={12}>
+      <Grid container xs={12} sx={{ mt: 10 }}>
         <Grid
           item
-          sm={6}
+          sm={4}
           data-aos="fade-right"
           data-aos-duration="2500"
           sx={{
@@ -66,7 +66,7 @@ const HomePage = () => {
             Contact
           </Button>
         </Grid>
-        {/* <Grid
+        <Grid
           item
           sm={4}
           sx={{
@@ -77,7 +77,9 @@ const HomePage = () => {
             textAlign: "left",
           }}
         >
-          <Box sx={{ display: "flex", alignItems: "center" }}>
+          <Box
+            sx={{ display: { lg: "flex", sm: "none" }, alignItems: "center" }}
+          >
             <Box>
               <Typography
                 variant="h5"
@@ -85,22 +87,29 @@ const HomePage = () => {
                 gutterBottom
                 color="gray"
                 sx={{ textAlign: "center" }}
-                data-aos="fade-right"
+                data-aos="zoom-out"
                 data-aos-duration="2500"
               >
-                I'm a full-stack software engineer with one year of industry
-                experience, specializing in [Your Primary Technologies or
-                Stack]. I've gained hands-on experience through training and
-                self-learning, and I'm passionate about building innovative
-                solutions to solve real-world problems.
+                "The only way to do great work is to love what you do."
+              </Typography>
+              <Typography
+                variant="h6"
+                component="h1"
+                gutterBottom
+                color="white"
+                sx={{ textAlign: "center" }}
+                data-aos="zoom-out"
+                data-aos-duration="2500"
+              >
+                - Steve Jobs
               </Typography>
             </Box>
           </Box>
-        </Grid> */}
+        </Grid>
         <Grid
           item
-          sm={6}
-          data-aos="zoom-in"
+          sm={4}
+          data-aos="flip-right"
           data-aos-duration="2500"
           sx={{
             display: "flex",
@@ -108,7 +117,7 @@ const HomePage = () => {
             alignItems: "center",
           }}
         >
-          <Box sx={{ width: { lg: 500, sm: 400, xs: 200 } }}>
+          <Box sx={{ width: { sm: 400, xs: 200 } }}>
             <img
               src={BackgroundImage}
               alt="BgImage"
