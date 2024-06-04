@@ -1,18 +1,19 @@
-import React from 'react';
-import { Box, Grid, Typography, Link } from '@mui/material';
+import React from "react";
+import { Box, Grid, Typography, Link, Button } from "@mui/material";
+import { Link as ScrollLink } from "react-scroll";
 
 const Footer = () => {
   return (
     <Box
       sx={{
-        backgroundColor: '#1c1c1c',
-        color: 'white',
+        backgroundColor: "#1c1c1c",
+        color: "white",
         py: 3,
         mt: 5,
       }}
     >
       <Grid container spacing={2} justifyContent="center">
-        <Grid item xs={12} md={4} sx={{ textAlign: 'center' }}>
+        <Grid item xs={12} md={4} sx={{ textAlign: "center" }}>
           <Typography variant="h6" gutterBottom>
             Nuwin Vinwath
           </Typography>
@@ -20,24 +21,48 @@ const Footer = () => {
             Full Stack Developer based in Colombo, Sri Lanka
           </Typography>
         </Grid>
-        <Grid item xs={12} md={4} sx={{ textAlign: 'center' }}>
+        <Grid item xs={12} md={4} sx={{ textAlign: "center" }}>
           <Typography variant="h6" gutterBottom>
             Quick Links
           </Typography>
-          <Link href="#home" color="inherit" sx={{ display: 'block' }}>
-            Home
-          </Link>
-          <Link href="#about" color="inherit" sx={{ display: 'block' }}>
-            About
-          </Link>
-          <Link href="#projects" color="inherit" sx={{ display: 'block' }}>
-            Projects
-          </Link>
-          <Link href="#contact" color="inherit" sx={{ display: 'block' }}>
-            Contact
-          </Link>
+          <ScrollLink
+            to="home"
+            spy={true}
+            smooth={true}
+            offset={-80}
+            duration={500}
+          >
+            <Button>Home</Button>
+          </ScrollLink>
+          <ScrollLink
+            to="about"
+            spy={true}
+            smooth={true}
+            offset={-80}
+            duration={500}
+          >
+            <Button>About</Button>
+          </ScrollLink>
+          <ScrollLink
+            to="myProjects"
+            spy={true}
+            smooth={true}
+            offset={-80}
+            duration={500}
+          >
+            <Button>My Projects</Button>
+          </ScrollLink>
+          <ScrollLink
+            to="contact"
+            spy={true}
+            smooth={true}
+            offset={-80}
+            duration={500}
+          >
+            <Button>Contact</Button>
+          </ScrollLink>
         </Grid>
-        <Grid item xs={12} md={4} sx={{ textAlign: 'center' }}>
+        <Grid item xs={12} md={4} sx={{ textAlign: "center" }}>
           <Typography variant="h6" gutterBottom>
             Contact
           </Typography>
@@ -45,11 +70,18 @@ const Footer = () => {
             Email: nuwinvinwath47@gmail.com
           </Typography>
           <Typography variant="body1">
-            LinkedIn: <Link href="https://www.linkedin.com/in/nuwin-vinwath/" color="inherit" target="_blank">Nuwin Vinwath</Link>
+            LinkedIn:{" "}
+            <Link
+              href="https://www.linkedin.com/in/nuwin-vinwath/"
+              color="inherit"
+              target="_blank"
+            >
+              Nuwin Vinwath
+            </Link>
           </Typography>
         </Grid>
       </Grid>
-      <Typography variant="body2" sx={{ textAlign: 'center', mt: 3 }}>
+      <Typography variant="body2" sx={{ textAlign: "center", mt: 3 }}>
         &copy; {new Date().getFullYear()} Nuwin Vinwath. All rights reserved.
       </Typography>
     </Box>

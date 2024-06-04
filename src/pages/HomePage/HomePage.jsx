@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Grid, Typography, Button, Box } from "@mui/material";
+import { Grid, Typography, Button, Box, Divider } from "@mui/material";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import BackgroundImage from "../../assets/BackgroundImage.jpg";
@@ -12,6 +12,8 @@ import {
   SiDotnet,
 } from "react-icons/si";
 import Footer from "../../components/Footer/Footer";
+import MyProjects from "../MyProjects/MyProjects";
+import About from "../About/About";
 
 const HomePage = () => {
   useEffect(() => {
@@ -21,7 +23,7 @@ const HomePage = () => {
   return (
     <>
       <NavBar />
-      <Grid container xs={12} sx={{ mt: 10 }}>
+      <Grid container xs={12} sx={{ mt: 15 }} id="home">
         <Grid
           item
           sm={4}
@@ -127,70 +129,14 @@ const HomePage = () => {
           </Box>
         </Grid>
         <Grid container sm={12}>
-          <Grid item sm={12}>
-            <Typography
-              variant="h2"
-              component="h1"
-              gutterBottom
-              sx={{ textAlign: "center", m: 2 }}
-              data-aos="zoom-in"
-              data-aos-duration="2500"
-            >
-              Who am I ?
-            </Typography>
-          </Grid>
-          <Grid
-            item
-            sm={12}
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              textAlign: "center",
-            }}
-          >
-            <Box sx={{ m: 2 }} data-aos="zoom-in" data-aos-duration="2500">
-              <Typography variant="h5" component="h1" gutterBottom color="gray">
-                Hi, I'm Nuwin Vinwath, a passionate Full Stack Developer hailing
-                from the vibrant city of Colombo, Sri Lanka. At the youthful age
-                of 21, I've already embarked on an exciting journey in the realm
-                of software engineering. My professional odyssey began as a
-                Trainee Software Engineer at ICET, where I delved into the
-                intricacies of software development and honed my skills under
-                the guidance of seasoned professionals.
-              </Typography>
-            </Box>
+          <Grid item sm={12} id="about">
+            <About />
           </Grid>
 
-          <Grid
-            item
-            sm={12}
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              textAlign: "center",
-            }}
-          >
-            <Box sx={{ m: 2 }} data-aos="zoom-in" data-aos-duration="2500">
-              <Typography variant="h5" component="h1" gutterBottom color="gray">
-                Subsequently, I had the privilege of serving as a Software
-                Engineer Intern at mobios private limited, where I contributed
-                to various projects and gained invaluable hands-on experience in
-                crafting innovative solutions. My educational background
-                includes completing my O/Ls and A/Ls from{" "}
-                <b>Taxila Central College</b>, followed by pursuing a Diploma in
-                Software Engineering. Currently, I am pursuing my undergraduate
-                studies at the prestigious{" "}
-                <b>Faculty of Technology University of Sri Jayewardhanapura </b>
-                , where I continue to expand my knowledge and skills in the
-                dynamic field of software engineering. With a relentless passion
-                for learning and a drive to make a meaningful impact through
-                technology, I am committed to pushing the boundaries of
-                innovation and creating transformative digital experiences.
-              </Typography>
-            </Box>
+          <Grid item sm={12}>
+            <Divider sx={{ my: 5, backgroundColor: "gray" }} />
           </Grid>
+
           <Grid item sm={12} data-aos="zoom-in" data-aos-duration="2500">
             <Typography
               variant="h2"
@@ -239,6 +185,22 @@ const HomePage = () => {
                 </Box>
               </Box>
             </Box>
+          </Grid>
+          <Grid item sm={12}>
+            <Divider sx={{ my: 5, backgroundColor: "gray" }} />
+          </Grid>
+          <Grid
+            item
+            sm={12}
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              textAlign: "center",
+            }}
+            id="myProjects"
+          >
+            <MyProjects />
           </Grid>
           <Grid item sm={12}>
             <Footer />

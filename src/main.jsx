@@ -6,6 +6,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 import theme from "./theme";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import "./index.css";
 
 AOS.init();
 

@@ -1,5 +1,6 @@
 import React from "react";
 import { AppBar, Toolbar, Typography, Button, Box } from "@mui/material";
+import { Link as ScrollLink } from "react-scroll";
 
 const NavBar = () => {
   return (
@@ -16,15 +17,40 @@ const NavBar = () => {
             gap: { lg: 4, sm: 2, xs: 1 },
           }}
         >
-          <Button color="inherit" sx={{ color: "white" }}>
-            Home
-          </Button>
-          <Button color="inherit" sx={{ color: "white" }}>
-            About
-          </Button>
-          <Button color="inherit" sx={{ color: "white" }}>
-            Projects
-          </Button>
+          <ScrollLink
+            to="home"
+            spy={true}
+            smooth={true}
+            offset={-80}
+            duration={500}
+          >
+            <Button color="inherit" sx={{ color: "white" }}>
+              Home
+            </Button>
+          </ScrollLink>
+
+          <ScrollLink
+            to="about"
+            spy={true}
+            smooth={true}
+            offset={-80}
+            duration={500}
+          >
+            <Button color="inherit" sx={{ color: "white" }}>
+              About
+            </Button>
+          </ScrollLink>
+          <ScrollLink
+            to="myProjects"
+            spy={true}
+            smooth={true}
+            offset={-80}
+            duration={500}
+          >
+            <Button color="inherit" sx={{ color: "white" }}>
+              Projects
+            </Button>
+          </ScrollLink>
           <Button color="inherit" sx={{ color: "white" }}>
             Contact
           </Button>
