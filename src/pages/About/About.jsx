@@ -61,7 +61,7 @@ const About = () => {
             projects and gained invaluable hands-on experience in crafting
             innovative solutions. My educational background includes completing
             my O/Ls and A/Ls from <b>Taxila Central College</b>, followed by
-            pursuing a Diploma in Software Engineering.
+            pursuing a <b>Diploma in Software Engineering</b>.
           </Typography>
           <Box sx={{ m: 2 }} data-aos="zoom-in" data-aos-duration="2500">
             <Typography variant="h5" component="h1" gutterBottom color="gray">

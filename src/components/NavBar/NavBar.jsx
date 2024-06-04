@@ -51,9 +51,17 @@ const NavBar = () => {
               Projects
             </Button>
           </ScrollLink>
-          <Button color="inherit" sx={{ color: "white" }}>
-            Contact
-          </Button>
+          <ScrollLink
+            to="techStack"
+            spy={true}
+            smooth={true}
+            offset={-80}
+            duration={500}
+          >
+            <Button color="inherit" sx={{ color: "white" }}>
+              Tech Stack
+            </Button>
+          </ScrollLink>
         </Box>
       </Toolbar>
     </AppBar>

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Grid, Typography, Button, Box, Divider } from "@mui/material";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -14,11 +14,22 @@ import {
 import Footer from "../../components/Footer/Footer";
 import MyProjects from "../MyProjects/MyProjects";
 import About from "../About/About";
+import ContactMe from "../../components/ContactMe/ContactMe";
 
 const HomePage = () => {
+  const [openContactDialog, setOpenContactDialog] = useState();
+  
   useEffect(() => {
     AOS.init({ once: false, mirror: true });
   }, []);
+
+  const handleContactClick = () => {
+    setOpenContactDialog(true);
+  };
+
+  const handleContactClose = () => {
+    setOpenContactDialog(false);
+  };
 
   return (
     <>
@@ -64,6 +75,7 @@ const HomePage = () => {
               color: "white",
               borderColor: "white",
             }}
+            onClick={handleContactClick}
           >
             Contact
           </Button>
@@ -133,7 +145,7 @@ const HomePage = () => {
             <About />
           </Grid>
 
-          <Grid item sm={12}>
+          <Grid item sm={12} id="techStack">
             <Divider sx={{ my: 5, backgroundColor: "gray" }} />
           </Grid>
 
@@ -207,6 +219,9 @@ const HomePage = () => {
           </Grid>
         </Grid>
       </Grid>
+      {openContactDialog && (
+        <ContactMe open={openContactDialog} onClose={handleContactClose} />
+      )}
     </>
   );
 };

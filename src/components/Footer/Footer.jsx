@@ -53,13 +53,13 @@ const Footer = () => {
             <Button>My Projects</Button>
           </ScrollLink>
           <ScrollLink
-            to="contact"
+            to="techStack"
             spy={true}
             smooth={true}
             offset={-80}
             duration={500}
           >
-            <Button>Contact</Button>
+            <Button>Tech Stack</Button>
           </ScrollLink>
         </Grid>
         <Grid item xs={12} md={4} sx={{ textAlign: "center" }}>
