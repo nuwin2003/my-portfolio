@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Box, Grid, Typography } from "@mui/material";
+import AOS from "aos";
 import "aos/dist/aos.css";
 
 const About = () => {
+  useEffect(() => {
+    AOS.init({ once: false, mirror: true });
+  }, []);
   return (
     <Grid container sm={12}>
       <Grid item sm={12}>
