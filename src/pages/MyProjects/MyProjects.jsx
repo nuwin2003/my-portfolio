@@ -109,19 +109,19 @@ const MyProjects = () => {
 
   return (
     <Grid container xs={12}>
-      <Grid item sm={12} data-aos="zoom-in" data-aos-duration="2500">
+      <Grid item xs={12} data-aos="zoom-in" data-aos-duration="2500">
         <Typography
           variant="h2"
           component="h1"
           gutterBottom
-          sx={{ textAlign: "center", m: 2 }}
+          sx={{ textAlign: "center", m: 2, fontSize: { xs: '2rem', sm: '3rem', lg: '4rem' } }}
         >
           My Projects
         </Typography>
       </Grid>
-      <Grid container item sm={12} spacing={2} m={2}>
+      <Grid container item xs={12} spacing={2} m={2}>
         {projectList.map((project, index) => (
-          <Grid key={index} item sm={6}>
+          <Grid key={index} item xs={12} sm={6} data-aos="zoom-in" data-aos-duration="2500">
             <ProjectCard project={project} />
           </Grid>
         ))}
