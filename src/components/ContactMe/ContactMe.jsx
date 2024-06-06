@@ -33,6 +33,7 @@ const ContactMe = ({ open, onClose }) => {
           position: "absolute",
           top: 10,
           right: 10,
+          zIndex: 10,
         }}
       >
         <img src={DialogClose} alt="Close" style={{ height: 20, width: 20 }} />
@@ -47,27 +48,82 @@ const ContactMe = ({ open, onClose }) => {
             gap: 2,
           }}
         >
-          <Typography sx={{ fontWeight: 600, fontSize: 30, m: 1 }}>
+          <Typography
+            sx={{
+              fontWeight: 600,
+              fontSize: { xs: 24, sm: 26, md: 28, lg: 30 },
+              m: 1,
+              textAlign: "center",
+            }}
+          >
             Contact Information
           </Typography>
 
-          <Box sx={{ display: "flex", justifyContent: "center", gap: 1 }}>
-            <SiWhatsapp size={24} /> +94 76 570 8684
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              gap: 1,
+              fontSize: { xs: 16, sm: 18, md: 20, lg: 22 },
+            }}
+          >
+            <SiWhatsapp size={24} />
+            <Typography>+94 76 570 8684</Typography>
           </Box>
-          <Box sx={{ display: "flex", justifyContent: "center", gap: 1 }}>
-            <SiLinkedin size={24} /> Nuwin Vinwath
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              gap: 1,
+              fontSize: { xs: 16, sm: 18, md: 20, lg: 22 },
+            }}
+          >
+            <SiLinkedin size={24} />
+            <Typography>Nuwin Vinwath</Typography>
           </Box>
-          <Box sx={{ display: "flex", justifyContent: "center", gap: 1 }}>
-            <SiFacebook size={24} /> Nuwin Vinwath
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              gap: 1,
+              fontSize: { xs: 16, sm: 18, md: 20, lg: 22 },
+            }}
+          >
+            <SiFacebook size={24} />
+            <Typography>Nuwin Vinwath</Typography>
           </Box>
-          <Box sx={{ display: "flex", justifyContent: "center", gap: 1 }}>
-            <SiGithub size={24} /> nuwin2003
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              gap: 1,
+              fontSize: { xs: 16, sm: 18, md: 20, lg: 22 },
+            }}
+          >
+            <SiGithub size={24} />
+            <Typography>nuwin2003</Typography>
           </Box>
-          <Box sx={{ display: "flex", justifyContent: "center", gap: 1 }}>
-            <SiInstagram size={24} /> nuwin.__
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              gap: 1,
+              fontSize: { xs: 16, sm: 18, md: 20, lg: 22 },
+            }}
+          >
+            <SiInstagram size={24} />
+            <Typography>nuwin.__</Typography>
           </Box>
-          <Box sx={{ display: "flex", justifyContent: "center", gap: 1 }}>
-            <SiTiktok size={24} /> @nuwin_vinwath
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              gap: 1,
+              fontSize: { xs: 16, sm: 18, md: 20, lg: 22 },
+            }}
+          >
+            <SiTiktok size={24} />
+            <Typography>@nuwin_vinwath</Typography>
           </Box>
         </Box>
       </DialogContent>
