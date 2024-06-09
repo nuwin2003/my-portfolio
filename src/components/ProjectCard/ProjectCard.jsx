@@ -41,13 +41,12 @@ const ProjectCard = ({ project }) => {
         <Typography variant="body2" color="text.primary">
           {project.description}
         </Typography>
-        <ul>
-          {project?.responsibilities?.map((responsibility, index) => (
-            <li key={index}>
-              <Typography variant="body2">{responsibility}</Typography>
-            </li>
-          ))}
-        </ul>
+
+        {project?.responsibilities?.map((responsibility, index) => (
+          <Typography variant="body2" sx={{ m: 2 }}>
+            {responsibility}
+          </Typography>
+        ))}
       </CardContent>
     </Card>
   );
